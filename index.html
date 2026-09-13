@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Winfinity Rewards | VIP Player Feedback Survey</title>
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            nova: {
+              bg: '#0B0614',
+              deep: '#160B2E',
+              rich: '#3B176D',
+              vibrant: '#6D28D9',
+              gold: '#F5C451',
+              goldDark: '#B8860B',
+              champagne: '#FFE6A3',
+              cardBorder: 'rgba(245, 196, 81, 0.22)',
+              cardBg: 'rgba(22, 11, 46, 0.85)'
+            }
+          },
+          backgroundImage: {
+            'gold-metallic': 'linear-gradient(135deg, #FFE6A3 0%, #F5C451 50%, #B8860B 100%)',
+          },
+          boxShadow: {
+            'glow-gold': '0 0 25px rgba(245, 196, 81, 0.28)',
+            'glow-purple': '0 0 35px rgba(109, 40, 217, 0.35)',
+            'luxury': '0 20px 50px rgba(0, 0, 0, 0.6)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body {
+      background-color: #0B0614;
+      color: #F3F4F6;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      overflow-x: hidden;
+    }
+    .bg-ambient-pattern {
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(109, 40, 217, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(245, 196, 81, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(59, 23, 109, 0.25) 0%, transparent 60%);
+    }
+    .option-card.selected {
+      background-color: rgba(59, 23, 109, 0.8) !important;
+      border-color: #F5C451 !important;
+      box-shadow: 0 0 20px rgba(109, 40, 217, 0.35);
+    }
+    .option-card.selected .check-box {
+      background-color: #F5C451 !important;
+      border-color: #F5C451 !important;
+      color: #160B2E !important;
+    }
+    .option-card.selected .check-icon {
+      display: block !important;
+    }
+    .star-btn.active svg {
+      fill: #F5C451;
+      stroke: #F5C451;
+    }
+    .star-btn.active span {
+      color: #FFE6A3;
+      font-weight: 700;
+    }
+  </style>
+</head>
+
+<body class="min-h-screen bg-nova-bg bg-ambient-pattern flex flex-col selection:bg-nova-gold selection:text-nova-deep">
+
+  <!-- TOP HEADER / BRAND BAR -->
+  <header class="w-full border-b border-white/5 bg-nova-bg/85 backdrop-blur-md sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gold-metallic flex items-center justify-center shadow-glow-gold">
+          <i data-lucide="crown" class="w-6 h-6 text-nova-deep"></i>
+        </div>
+        <div>
+          <span class="text-xl sm:text-2xl font-black tracking-widest bg-clip-text text-transparent bg-gold-metallic">
+            Winfinity Rewards
+          </span>
+          <span class="block text-[10px] tracking-wider text-purple-300/70 font-semibold uppercase">
+            Winfinity Rewards Entertainment LLC
+          </span>
+        </div>
+      </div>
+      <div class="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-nova-rich/50 border border-nova-gold/30 text-xs text-nova-champagne">
+        <i data-lucide="shield-check" class="w-4 h-4 text-nova-gold"></i>
+        <span class="font-medium hidden sm:inline">Official VIP Portal</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="flex-1 max-w-4xl w-full mx-auto px-4 sm:px-6 py-8 sm:py-12 flex flex-col justify-center">
+
+    <!-- HERO SECTION -->
+    <section id="hero-section" class="relative overflow-hidden py-10 sm:py-16 text-center">
+      <div class="absolute -top-10 left-10 text-nova-gold/10 font-serif text-8xl select-none pointer-events-none">♠</div>
+      <div class="absolute top-20 right-10 text-nova-gold/10 font-serif text-9xl select-none pointer-events-none">♦</div>
+      <div class="absolute bottom-6 left-1/4 text-nova-gold/10 font-serif text-7xl select-none pointer-events-none">♣</div>
+      <div class="absolute bottom-10 right-1/4 text-nova-gold/10 font-serif text-8xl select-none pointer-events-none">♥</div>
+
+      <div class="relative z-10 max-w-2xl mx-auto">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-nova-rich/60 border border-nova-gold/30 text-nova-champagne text-xs font-semibold uppercase tracking-widest mb-6 shadow-glow-purple">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5 text-nova-gold"></i>
+          Player Experience & Connection Survey
+        </div>
+
+        <h1 class="text-4xl sm:text-6xl font-black tracking-tight text-white mb-6">
+          Your Voice. <br />
+          <span class="bg-clip-text text-transparent bg-gold-metallic">
+            Your Games. Your Choice.
+          </span>
+        </h1>
+
+        <p class="text-base sm:text-lg text-purple-200/80 mb-10 leading-relaxed font-light">
+          Help us shape the future of Winfinity Rewards. Tell us how you prefer to stay connected, what you love to play, and ensure your account remains verified.
+        </p>
+
+        <button
+          onclick="startSurvey()"
+          class="group inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-gold-metallic text-nova-deep font-black text-base tracking-wide hover:brightness-110 active:scale-95 transition-all shadow-glow-gold cursor-pointer"
+        >
+          Take the Survey
+          <i data-lucide="chevron-down" class="w-5 h-5 group-hover:translate-y-0.5 transition-transform"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- SURVEY FORM CARD -->
+    <section id="survey-card" class="hidden bg-nova-cardBg backdrop-blur-xl border border-nova-cardBorder rounded-3xl p-6 sm:p-10 shadow-luxury relative">
+      
+      <!-- Progress Bar & Indicator -->
+      <div class="w-full mb-8">
+        <div class="flex justify-between items-center text-xs font-medium uppercase tracking-wider mb-2">
+          <span class="text-nova-champagne">
+            Step <span id="current-step-text" class="text-nova-gold font-bold">1</span> of 6
+          </span>
+          <span id="percentage-text" class="text-purple-300/70">16% Completed</span>
+        </div>
+        <div class="w-full h-2.5 bg-nova-deep rounded-full overflow-hidden border border-white/10 p-0.5">
+          <div id="progress-fill" class="h-full bg-gold-metallic rounded-full transition-all duration-300 shadow-glow-gold" style="width: 16%;"></div>
+        </div>
+      </div>
+
+      <!-- Validation Error Banner -->
+      <div id="validation-error" class="hidden mb-6 p-3.5 bg-red-950/80 border border-red-500/50 rounded-xl text-red-200 text-xs font-semibold flex items-center gap-2">
+        <i data-lucide="alert-circle" class="w-4 h-4 text-red-400"></i>
+        <span id="error-message"></span>
+      </div>
+
+      <!-- STEP 1: ABOUT YOU (Includes Mandatory Name) -->
+      <div id="step-1" class="survey-step space-y-7">
+        <div>
+          <label class="block text-base sm:text-lg font-semibold text-white mb-1">
+            Player Full Name <span class="text-nova-gold">* Required</span>
+          </label>
+          <p class="text-xs text-purple-200/60 mb-3">Please enter your real full name for verification and rewards matching</p>
+          <div class="relative">
+            <input
+              type="text"
+              id="playerName"
+              placeholder="e.g. Johnathan Carter"
+              class="w-full bg-black/40 border border-white/15 rounded-xl px-4 py-3.5 text-white placeholder-purple-300/30 focus:outline-none focus:border-nova-gold text-sm"
+              required
+            />
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-base sm:text-lg font-semibold text-white mb-1">
+            How long have you been playing with Winfinity Rewards? <span class="text-nova-gold">*</span>
+          </label>
+          <p class="text-xs text-purple-200/60 mb-3">Select your player tenure</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" data-group="duration">
+            <div class="option-card single p-4 rounded-xl border border-white/10 bg-black/20 hover:border-nova-gold/40 flex items-center justify-between cursor-pointer transition-all" data-val="Less than 1 month">
+              <span class="text-sm font-medium">Less than 1 month</span>
+              <div class="check-box w-5 h-5 rounded-full border border-white/20 flex items-center justify-center"><i data-lucide="check" class="check-icon hidden w-3 h-3 stroke-[3]"></i></div>
+            </div>
+            <div class="option-card single p-4 rounded-xl border border-white/10 bg-black/20 hover:border-nova-gold/40 flex items-center justify-between cursor-pointer transition-all" data-val="1 to 6 months">
+              <span class="text-sm font-medium">1 to 6 months</span>
+              <div class="check-box w-5 h-5 rounded-full border border-white/20 flex items-center justify-center"><i data-lucide="check" class="check-icon hidden w-3 h-3 stroke-[3]"></i></div>
+            </div>
+            <div class="option-card single p-4 rounded-xl border border-white/10 bg-black/20 hover:border-nova-gold/40 flex items-center justify-between cursor-pointer transition-all" data-val="6 months to 1 year">
+              <span class="text-sm font-medium">6 months to 1 year</span>
+              <div class="check-box w-5 h-5 rounded-full border border-white/20 flex items-center justify-center"><i data-lucide="check" class="check-icon hidden w-3 h-3 stroke-[3]"></i></div>
+            </div>
+            <div class="option-card single p-4 rounded-xl border border-white/10 bg-black/20 hover:border-nova-gold/40 flex items-center justify-between cursor-pointer transition-all" data-val="More than 1 year">
+              <span class="text-sm font-medium">More than 1 year</span>
+              <div class="check-box w-5 h-5 rounded-full border border-white/20 flex items-center justify-center"><i data-lucide="check" class="check-icon hidden w-3 h-3 stroke-[3]"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-base sm:text-lg font-semibold text-white mb-1">
+            How often do you usually play on Winfinity Rewards? <span class="text-nova-gold">*</span>
+          </label>
+          <p class="text-xs text-purple-200/60 mb-3">Select your regular playing schedule</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" data-group="frequency">
+            <div class="option-card single p-4 rounded-xl border border-white/10 bg-black/20 hover:border-nova-gold/40 flex items-center justify-between cursor-pointer transition-all" data-val="Daily">
+              <span class="text-sm font-medium">Daily</span>
+              <div class="check-box w-5 h-5 rounded-full border border-white/20 flex items-center justify-center"><i data-lucide="check" class="check-icon hidden w-3 h-3 stroke-[3]"></i></div>
+            </div>
+            <div class="option-card single p-4 rounded-xl border border-white/10 bg-black/20 hover:border-nova-gold/40 flex items-center justify-between cursor-pointer transition-all" data-val="A few times a week">
+              <span class="text-sm font-medium">A few times a week</span>
+              <div class="check-box w-5 h-5 rounded-full border border-white/20 flex items-center justify-center"><i data-lucide="check" class="check-icon hidden w-3 h-3 stroke-[3]"></i></div>
+            </div>
+            <div class="option-card single p-4 rounded-xl border border-white/10 bg-black/20 hover:border-nova-gold/40 flex items-center justify-between cursor-pointer transition-all" data-val="Once a week">
+              <span class="text-sm font-medium">Once a week</span>
+              <div class="check-box w-5 h-5 rounded-full border border-white/20 flex items-center justify-center"><i data-lucide="check" class="check-icon hidden w-3 h-3 stroke-[3]"></i></div>
+            </div>
+            <div class="option-card single p-4 rounded-xl border border-white/10 bg-black/20 hover:border-nova-gold/40 flex items-center justify-between cursor-pointer transition-all" data-val="Occasionally / Weekends">
+              <span class="text-sm font-medium">Occasionally / Weekends</span>
+              <div class="check-box w-5 h-5 rounded-full border border-white/20 flex items-center justify-center"><i data-lucide="check" class="check-icon hidden w-3 h-3 stroke-[3]"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 2: STAY CONNECTED -->
+      <div id="step-2" class="survey-step hidden space-y-8">
+        <div>
+          <label class="block text-base sm:text-lg font-semibold text-white mb-1">
+            If our Facebook page becomes unavailable, how would you prefer to stay connected? <span class="text-nova-gold">*</span>
+          </label>
+          <p class="text-xs text-purple-200/60 mb-4">Choose your priority update channel</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" data-group="backupChannel">
+            <div class="option-card single p-4 rounded-xl border border-white/10 bg-black/20 hover:border-nova-gold/40 flex items-center justify-between cursor-pointer" data-val="WhatsApp">
+              <div class="flex items-center gap-3"><i data-lucide="message-circle" class="w-5 h-5 text-nova-champagne"></i><span class="text-sm font-medium">WhatsApp</span></div>
+              <div class="check-box w-5 h-5 rounded-full border border-white/20 flex items-center justify-center"><i data-lucide="check" class="check-icon hidden w-3 h-3 stroke-[3]"></i></div>
+            </div>
+            <div class="option-card single p-4 rounded-xl border border-white/10 bg-black/20 hover:border-nova-gold/40 flex items-center justify-between cursor-pointer" data-val="Telegram">
+              <div class="flex items-center gap-3"><i data-lucide="send" class="w-5 h-5 text-nova-champagne"></i><span class="text-sm font-medium">Telegram</span></div>
+              <div class="check-box w-5 h-5 rounded-full border border-white/20 flex items-center justify-center"><i data-lucide="check" class="check-icon hidden w-3 h-3 stroke-[3]"></i></div>
+            </div>
+            <div class="option-card single p-4 rounded-xl border border-white/10 bg-black/20 hover:border-nova-gold/40 flex items-center justify-between cursor-pointer" data-val="Winfinity Rewards Website">
+              <div class="flex items-center gap-3"><i data-lucide="globe" class="w-5 h-5 text-nova-champagne"></i><span class="text-sm font-medium">Winfinity Rewards Website</span></div>
+              <div class="check-box w-5 h-5 rounded-full border border-white/20 flex items-center justify-center"><i data-lucide="check" class="check-icon hidden w-3 h-3 stroke-[3]"></i></div>
+            </div>
+            <div class="option-card single p-4 rounded-xl border border-white/10 bg-black/20 hover:border-nova-gold/40 flex items-center justify-between cursor-pointer" data-val="Email">
+              <div class="flex items-center gap-3"><i data-lucide="mail" class="w-5 h-5 text-nova-champagne"></i><span class="text-sm font-medium">Email</span></div>
+              <div class="check-box w-5 h-5 rounded-full border border-white/20 flex items-center justify-center"><i data-lucide="check" class="check-icon hidden w-3 h-3 stroke-[3]"></i></div>
+            </div>
+            <div class="option-card single p-4 rounded-xl border border-white/10 bg-black/20 hover:border-nova-gold/40 flex items-center justify-between cursor-pointer" data-val="Instagram">
+              <div class="flex items-center gap-3"><i data-lucide="instagram" class="w-5 h-5 text-nova-champagne"></i><span class="text-sm font-medium">Instagram</span></div>
+              <div class="check-box w-5 h-5 rounded-full border border-white/20 flex items-center justify-center"><i data-lucide="check" class="check-icon hidden w-3 h-3 stroke-[3]"></i></div>
+            </div>
+            <div class="option-card single p-4 rounded-xl border border-white/10 bg-black/20 hover:border-nova-gold/40 flex items-center justify-between cursor-pointer" data-val="Other">
+              <div class="flex items-center gap-3"><i data-lucide="help-circle" class="w-5 h-5 text-nova-champagne"></i><span class="text-sm font-medium">Other</span></div>
+              <div class="check-box w-5 h-5 rounded-full border border-white/20 flex items-center justify-center"><i data-lucide="check" class="check-icon hidden w-3 h-3 stroke-[3]"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-base sm:text-lg font-semibold text-white mb-1">
+            Which platform would you prefer to use for playing Winfinity Rewards if Facebook is no longer available? <span class="text-nova-gold">*</span>
+          </label>
+          <p class="text-xs text-purple-200/60 mb-4">Choose your preferred gameplay interface</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" data-group="playPlatform">
+            <div class="option-card single p-4 rounded-xl border border-white/10 bg-black/20 hover:border-nova-gold/40 flex items-center justify-between cursor-pointer" data-val="Winfinity Rewards Website">
+              <span class="text-sm font-medium">Direct Website Portal</span>
+              <div class="check-box w-5 h-5 rounded-full border border-white/20 flex items-center justify-center"><i data-lucide="check" class="check-icon hidden w-3 h-3 stroke-[3]"></i></div>
+            </div>
+            <div class="option-card single p-4 rounded-xl border border-white/10 bg-black/20 hover:border-nova-gold/40 flex items-center justify-between cursor-pointer" data-val="Telegram">
+              <span class="text-sm font-medium">Telegram Mini App / Bot</span>
+              <div class="check-box w-5 h-5 rounded-full border border-white/20 flex items-center justify-center"><i data-lucide="check" class="check-icon hidden w-3 h-3 stroke-[3]"></i></div>
+            </div>
+            <div class="option-card single p-4 rounded-xl border border-white/10 bg-black/20 hover:border-nova-gold/40 flex items-center justify-between cursor-pointer" data-val="WhatsApp">
+              <span class="text-sm font-medium">WhatsApp Access</span>
+              <div class="check-box w-5 h-5 rounded-full border border-white/20 flex items-center justify-center"><i data-lucide="check" class="check-icon hidden w-3 h-3 stroke-[3]"></i></div>
+            </div>
+            <div class="option-card single p-4 rounded-xl border border-white/10 bg-black/20 hover:border-nova-gold/40 flex items-center justify-between cursor-pointer" data-val="Instagram">
+              <span class="text-sm font-medium">Instagram Portal</span>
+              <div class="check-box w-5 h-5 rounded-full border border-white/20 flex items-center justify-center"><i data-lucide="check" class="check-icon hidden w-3 h-3 stroke-[3]"></i></div>
+            </div>
+            <div class="option-card single p-4 rounded-xl border border-white/10 bg-black/20 hover:border-nova-gold/40 flex items-center justify-between cursor-pointer sm:col-span-2" data-val="Other">
+              <span class="text-sm font-medium">Other Standalone Mobile Client</span>
+              <div class="check-box w-5 h-5 rounded-full border border-white/20 flex items-center justify-center"><i data-lucide="check" class="check-icon hidden w-3 h-3 stroke-[3]"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 3: CONTACT PREFERENCES (ALL FIELDS MANDATORY) -->
+      <div id="step-3" class="survey-step hidden space-y-6">
+        
+        <!-- PRIMARY BACKUP CONTACT -->
+        <div class="p-5 rounded-2xl bg-nova-deep/90 border border-nova-gold/40 shadow-glow-gold/20">
+          <div class="flex items-start gap-3 mb-4">
+            <div class="p-2 rounded-lg bg-nova-gold/10 text-nova-gold">
+              <i data-lucide="shield-alert" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="text-sm sm:text-base font-bold text-white flex items-center gap-2">
+                Priority Backup Contact <span class="text-nova-gold text-xs">* Required</span>
+              </h3>
+              <p class="text-xs text-purple-200/70 mt-0.5">
+                Select your primary emergency line to preserve account balance & transactions.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 mb-3" id="mandatory-type-selector">
+            <button type="button" onclick="setMandatoryType('WhatsApp Number', this)" class="type-btn py-2 px-3 text-xs font-semibold rounded-lg border border-nova-gold bg-nova-gold text-nova-deep">WhatsApp Number</button>
+            <button type="button" onclick="setMandatoryType('Phone Number', this)" class="type-btn py-2 px-3 text-xs font-semibold rounded-lg border border-white/10 bg-white/5 text-gray-300">Phone Number (SMS)</button>
+            <button type="button" onclick="setMandatoryType('Social Account', this)" class="type-btn py-2 px-3 text-xs font-semibold rounded-lg border border-white/10 bg-white/5 text-gray-300">Other Social Handle</button>
+          </div>
+
+          <input
+            id="mandatoryContactValue"
+            type="text"
+            required
+            placeholder="e.g. +1 (555) 019-2834"
+            class="w-full bg-black/40 border border-nova-gold/30 rounded-xl px-4 py-3 text-white placeholder-purple-300/30 focus:outline-none focus:border-nova-gold text-sm"
+          />
+        </div>
+
+        <!-- OTHER CONTACT DETAILS (NOW STRICTLY MANDATORY) -->
+        <div class="p-5 rounded-2xl bg-white/5 border border-nova-gold/30 space-y-4">
+          <div class="flex items-center justify-between">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-nova-champagne">
+              Player Contact Records <span class="text-nova-gold">* All Required</span>
+            </h4>
+            <span class="text-[11px] text-nova-gold/80 font-medium">Required for backup validation</span>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-purple-200 mb-1">
+              WhatsApp Number <span class="text-nova-gold">*</span>
+            </label>
+            <input
+              type="text"
+              id="contact_whatsapp"
+              required
+              placeholder="e.g. +1 (555) 123-4567"
+              class="w-full bg-nova-bg/70 border border-white/15 rounded-xl px-4 py-2.5 text-white text-sm focus:border-nova-gold focus:outline-none"
+            />
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-purple-200 mb-1">
+              Telegram Username <span class="text-nova-gold">*</span>
+            </label>
+            <input
+              type="text"
+              id="contact_telegram"
+              required
+              placeholder="e.g. @username (or 'none' if you do not use)"
+              class="w-full bg-nova-bg/70 border border-white/15 rounded-xl px-4 py-2.5 text-white text-sm focus:border-nova-gold focus:outline-none"
+            />
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-purple-200 mb-1">
+              Instagram Handle <span class="text-nova-gold">*</span>
+            </label>
+            <input
+              type="text"
+              id="contact_instagram"
+              required
+              placeholder="e.g. @player_account (or 'none' if you do not use)"
+              class="w-full bg-nova-bg/70 border border-white/15 rounded-xl px-4 py-2.5 text-white text-sm focus:border-nova-gold focus:outline-none"
+            />
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-purple-200 mb-1">
+              Email Address <span class="text-nova-gold">*</span>
+            </label>
+            <input
+              type="email"
+              id="contact_email"
+              required
+              placeholder="e.g. yourname@email.com"
+              class="w-full bg-nova-bg/70 border border-white/15 rounded-xl px-4 py-2.5 text-white text-sm focus:border-nova-gold focus:outline-none"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 4: GAMING PREFERENCES -->
+      <div id="step-4" class="survey-step hidden space-y-8">
+        <div>
+          <label class="block text-base sm:text-lg font-semibold text-white mb-1">
+            What types of games do you enjoy playing the most? <span class="text-nova-gold">*</span>
+          </label>
+          <p class="text-xs text-purple-200/60 mb-4">Select all that apply</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="gamesGroup">
+            <div class="option-card multi p-4 rounded-xl border border-white/10 bg-black/20 flex items-center justify-between cursor-pointer" data-val="Slots" onclick="toggleMulti(this)">
+              <div class="flex items-center gap-3"><i data-lucide="flame" class="w-5 h-5 text-nova-gold"></i><span class="text-sm font-medium">Slots</span></div>
+              <div class="check-box w-5 h-5 rounded border border-white/20 flex items-center justify-center"><i data-lucide="check" class="check-icon hidden w-3 h-3 stroke-[3]"></i></div>
+            </div>
+            <div class="option-card multi p-4 rounded-xl border border-white/10 bg-black/20 flex items-center justify-between cursor-pointer" data-val="Card Games" onclick="toggleMulti(this)">
+              <div class="flex items-center gap-3"><i data-lucide="layers" class="w-5 h-5 text-nova-gold"></i><span class="text-sm font-medium">Card Games</span></div>
+              <div class="check-box w-5 h-5 rounded border border-white/20 flex items-center justify-center"><i data-lucide="check" class="check-icon hidden w-3 h-3 stroke-[3]"></i></div>
+            </div>
+            <div class="option-card multi p-4 rounded-xl border border-white/10 bg-black/20 flex items-center justify-between cursor-pointer" data-val="Table Games" onclick="toggleMulti(this)">
+              <div class="flex items-center gap-3"><i data-lucide="dices" class="w-5 h-5 text-nova-gold"></i><span class="text-sm font-medium">Table Games (Roulette, Dice)</span></div>
+              <div class="check-box w-5 h-5 rounded border border-white/20 flex items-center justify-center"><i data-lucide="check" class="check-icon hidden w-3 h-3 stroke-[3]"></i></div>
+            </div>
+            <div class="option-card multi p-4 rounded-xl border border-white/10 bg-black/20 flex items-center justify-between cursor-pointer" data-val="Crash Games" onclick="toggleMulti(this)">
+              <div class="flex items-center gap-3"><i data-lucide="trending-up" class="w-5 h-5 text-nova-gold"></i><span class="text-sm font-medium">Crash Games</span></div>
+              <div class="check-box w-5 h-5 rounded border border-white/20 flex items-center justify-center"><i data-lucide="check" class="check-icon hidden w-3 h-3 stroke-[3]"></i></div>
+            </div>
+            <div class="option-card multi p-4 rounded-xl border border-white/10 bg-black/20 flex items-center justify-between cursor-pointer" data-val="Bingo/Lottery" onclick="toggleMulti(this)">
+              <div class="flex items-center gap-3"><i data-lucide="ticket" class="w-5 h-5 text-nova-gold"></i><span class="text-sm font-medium">Bingo / Lottery</span></div>
+              <div class="check-box w-5 h-5 rounded border border-white/20 flex items-center justify-center"><i data-lucide="check" class="check-icon hidden w-3 h-3 stroke-[3]"></i></div>
+            </div>
+            <div class="option-card multi p-4 rounded-xl border border-white/10 bg-black/20 flex items-center justify-between cursor-pointer" data-val="Live Casino" onclick="toggleMulti(this)">
+              <div class="flex items-center gap-3"><i data-lucide="tv" class="w-5 h-5 text-nova-gold"></i><span class="text-sm font-medium">Live Casino</span></div>
+              <div class="check-box w-5 h-5 rounded border border-white/20 flex items-center justify-center"><i data-lucide="check" class="check-icon hidden w-3 h-3 stroke-[3]"></i></div>
+            </div>
+            <div class="option-card multi p-4 rounded-xl border border-white/10 bg-black/20 flex items-center justify-between cursor-pointer sm:col-span-2" data-val="Other" onclick="toggleMulti(this)">
+              <div class="flex items-center gap-3"><i data-lucide="sparkles" class="w-5 h-5 text-nova-gold"></i><span class="text-sm font-medium">Other</span></div>
+              <div class="check-box w-5 h-5 rounded border border-white/20 flex items-center justify-center"><i data-lucide="check" class="check-icon hidden w-3 h-3 stroke-[3]"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-base sm:text-lg font-semibold text-white mb-1">
+            Are there any games you'd like Winfinity Rewards to add?
+          </label>
+          <textarea
+            id="suggestedGames"
+            rows="3"
+            placeholder="Tell us any titles or themes you love to play..."
+            class="w-full bg-black/40 border border-white/10 rounded-xl p-4 text-white text-sm focus:border-nova-gold focus:outline-none placeholder-purple-300/30"
+          ></textarea>
+        </div>
+      </div>
+
+      <!-- STEP 5: IMPROVE Winfinity Rewards -->
+      <div id="step-5" class="survey-step hidden space-y-8">
+        <div>
+          <label class="block text-base sm:text-lg font-semibold text-white mb-1">
+            How satisfied are you with your overall Winfinity Rewards experience? <span class="text-nova-gold">*</span>
+          </label>
+          <p class="text-xs text-purple-200/60 mb-4">Rate our platform performance</p>
+          <div class="grid grid-cols-5 gap-2 sm:gap-3" id="satisfactionRatingGroup">
+            <button type="button" onclick="setRating(1)" class="star-btn flex flex-col items-center py-3.5 px-1 rounded-xl border border-white/10 bg-white/5 transition-all" data-level="1">
+              <i data-lucide="star" class="w-6 h-6 text-gray-500"></i>
+              <span class="text-[11px] mt-2 text-gray-400">Poor</span>
+            </button>
+            <button type="button" onclick="setRating(2)" class="star-btn flex flex-col items-center py-3.5 px-1 rounded-xl border border-white/10 bg-white/5 transition-all" data-level="2">
+              <i data-lucide="star" class="w-6 h-6 text-gray-500"></i>
+              <span class="text-[11px] mt-2 text-gray-400">Fair</span>
+            </button>
+            <button type="button" onclick="setRating(3)" class="star-btn flex flex-col items-center py-3.5 px-1 rounded-xl border border-white/10 bg-white/5 transition-all" data-level="3">
+              <i data-lucide="star" class="w-6 h-6 text-gray-500"></i>
+              <span class="text-[11px] mt-2 text-gray-400">Good</span>
+            </button>
+            <button type="button" onclick="setRating(4)" class="star-btn flex flex-col items-center py-3.5 px-1 rounded-xl border border-white/10 bg-white/5 transition-all" data-level="4">
+              <i data-lucide="star" class="w-6 h-6 text-gray-500"></i>
+              <span class="text-[11px] mt-2 text-gray-400">Very Good</span>
+            </button>
+            <button type="button" onclick="setRating(5)" class="star-btn flex flex-col items-center py-3.5 px-1 rounded-xl border border-white/10 bg-white/5 transition-all active" data-level="5">
+              <i data-lucide="star" class="w-6 h-6 text-gray-500"></i>
+              <span class="text-[11px] mt-2 text-gray-400">Excellent</span>
+            </button>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-base sm:text-lg font-semibold text-white mb-1">
+            What new features would you like to see?
+          </label>
+          <p class="text-xs text-purple-200/60 mb-4">Select all that interest you</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="featuresGroup">
+            <div class="option-card multi p-3.5 rounded-xl border border-white/10 bg-black/20 flex items-center justify-between cursor-pointer" data-val="More games" onclick="toggleMulti(this)">
+              <span class="text-sm font-medium">More game variety</span>
+              <div class="check-box w-5 h-5 rounded border border-white/20 flex items-center justify-center"><i data-lucide="check" class="check-icon hidden w-3 h-3 stroke-[3]"></i></div>
+            </div>
+            <div class="option-card multi p-3.5 rounded-xl border border-white/10 bg-black/20 flex items-center justify-between cursor-pointer" data-val="Loyalty/rewards program" onclick="toggleMulti(this)">
+              <span class="text-sm font-medium">VIP / Loyalty rewards</span>
+              <div class="check-box w-5 h-5 rounded border border-white/20 flex items-center justify-center"><i data-lucide="check" class="check-icon hidden w-3 h-3 stroke-[3]"></i></div>
+            </div>
+            <div class="option-card multi p-3.5 rounded-xl border border-white/10 bg-black/20 flex items-center justify-between cursor-pointer" data-val="Tournaments" onclick="toggleMulti(this)">
+              <span class="text-sm font-medium">Tournaments</span>
+              <div class="check-box w-5 h-5 rounded border border-white/20 flex items-center justify-center"><i data-lucide="check" class="check-icon hidden w-3 h-3 stroke-[3]"></i></div>
+            </div>
+            <div class="option-card multi p-3.5 rounded-xl border border-white/10 bg-black/20 flex items-center justify-between cursor-pointer" data-val="Daily/weekly challenges" onclick="toggleMulti(this)">
+              <span class="text-sm font-medium">Daily/weekly challenges</span>
+              <div class="check-box w-5 h-5 rounded border border-white/20 flex items-center justify-center"><i data-lucide="check" class="check-icon hidden w-3 h-3 stroke-[3]"></i></div>
+            </div>
+            <div class="option-card multi p-3.5 rounded-xl border border-white/10 bg-black/20 flex items-center justify-between cursor-pointer" data-val="Better mobile experience" onclick="toggleMulti(this)">
+              <span class="text-sm font-medium">Better mobile experience</span>
+              <div class="check-box w-5 h-5 rounded border border-white/20 flex items-center justify-center"><i data-lucide="check" class="check-icon hidden w-3 h-3 stroke-[3]"></i></div>
+            </div>
+            <div class="option-card multi p-3.5 rounded-xl border border-white/10 bg-black/20 flex items-center justify-between cursor-pointer" data-val="Faster support" onclick="toggleMulti(this)">
+              <span class="text-sm font-medium">Faster support</span>
+              <div class="check-box w-5 h-5 rounded border border-white/20 flex items-center justify-center"><i data-lucide="check" class="check-icon hidden w-3 h-3 stroke-[3]"></i></div>
+            </div>
+            <div class="option-card multi p-3.5 rounded-xl border border-white/10 bg-black/20 flex items-center justify-between cursor-pointer" data-val="More payment options" onclick="toggleMulti(this)">
+              <span class="text-sm font-medium">More payment options</span>
+              <div class="check-box w-5 h-5 rounded border border-white/20 flex items-center justify-center"><i data-lucide="check" class="check-icon hidden w-3 h-3 stroke-[3]"></i></div>
+            </div>
+            <div class="option-card multi p-3.5 rounded-xl border border-white/10 bg-black/20 flex items-center justify-between cursor-pointer" data-val="Promotions & special events" onclick="toggleMulti(this)">
+              <span class="text-sm font-medium">Promotions & special events</span>
+              <div class="check-box w-5 h-5 rounded border border-white/20 flex items-center justify-center"><i data-lucide="check" class="check-icon hidden w-3 h-3 stroke-[3]"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-base sm:text-lg font-semibold text-white mb-1">
+            What is one thing Winfinity Rewards could improve?
+          </label>
+          <textarea
+            id="oneImprovement"
+            rows="3"
+            placeholder="Tell us what would elevate your experience..."
+            class="w-full bg-black/40 border border-white/10 rounded-xl p-4 text-white text-sm focus:border-nova-gold focus:outline-none placeholder-purple-300/30"
+          ></textarea>
+        </div>
+      </div>
+
+      <!-- STEP 6: FINAL FEEDBACK -->
+      <div id="step-6" class="survey-step hidden space-y-8">
+        <div>
+          <label class="block text-base sm:text-lg font-semibold text-white mb-1">
+            Do you have any other suggestions or feedback for Winfinity Rewards?
+          </label>
+          <p class="text-xs text-purple-200/60 mb-2">Anything else on your mind? We review all feedback personally.</p>
+          <textarea
+            id="generalFeedback"
+            rows="4"
+            placeholder="Share any other thoughts, suggestions, or comments..."
+            class="w-full bg-black/40 border border-white/10 rounded-xl p-4 text-white text-sm focus:border-nova-gold focus:outline-none placeholder-purple-300/30"
+          ></textarea>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-nova-rich/40 border border-nova-gold/30">
+          <label class="block text-base font-semibold text-white mb-1">
+            Would you like to be notified when Winfinity Rewards launches an official backup communication channel? <span class="text-nova-gold">*</span>
+          </label>
+          <p class="text-xs text-purple-200/60 mb-4">Be the first to get access and claim exclusive VIP launch bonuses</p>
+
+          <div class="grid grid-cols-2 gap-3 mb-4" data-group="notifyBackup">
+            <div class="option-card single selected p-4 rounded-xl border border-white/10 bg-black/20 flex items-center justify-between cursor-pointer" data-val="Yes">
+              <span class="text-sm font-semibold">Yes, notify me!</span>
+              <div class="check-box w-5 h-5 rounded-full border border-white/20 flex items-center justify-center"><i data-lucide="check" class="check-icon block w-3 h-3 stroke-[3]"></i></div>
+            </div>
+            <div class="option-card single p-4 rounded-xl border border-white/10 bg-black/20 flex items-center justify-between cursor-pointer" data-val="No">
+              <span class="text-sm font-semibold">No thanks</span>
+              <div class="check-box w-5 h-5 rounded-full border border-white/20 flex items-center justify-center"><i data-lucide="check" class="check-icon hidden w-3 h-3 stroke-[3]"></i></div>
+            </div>
+          </div>
+
+          <div id="notifyChannelContainer" class="pt-4 border-t border-white/10">
+            <label class="block text-xs font-semibold uppercase tracking-wider text-nova-champagne mb-2">
+              Preferred Notification Method
+            </label>
+            <div class="grid grid-cols-3 gap-2" id="preferredNotificationChannelGroup">
+              <button type="button" onclick="setNotificationChannel('WhatsApp', this)" class="notif-chan-btn py-2 px-3 text-xs font-bold rounded-lg border border-nova-gold bg-nova-gold text-nova-deep">WhatsApp</button>
+              <button type="button" onclick="setNotificationChannel('Telegram', this)" class="notif-chan-btn py-2 px-3 text-xs font-medium rounded-lg border border-white/10 bg-white/5 text-gray-300">Telegram</button>
+              <button type="button" onclick="setNotificationChannel('Email', this)" class="notif-chan-btn py-2 px-3 text-xs font-medium rounded-lg border border-white/10 bg-white/5 text-gray-300">Email</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- NAVIGATION BUTTONS -->
+      <div class="flex items-center justify-between pt-8 mt-8 border-t border-white/10">
+        <button
+          id="btn-back"
+          type="button"
+          onclick="prevStep()"
+          class="invisible inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium text-purple-200 hover:text-white hover:bg-white/5 transition-all cursor-pointer"
+        >
+          <i data-lucide="arrow-left" class="w-4 h-4"></i> Back
+        </button>
+
+        <button
+          id="btn-next"
+          type="button"
+          onclick="nextStep()"
+          class="inline-flex items-center gap-2 px-7 py-3 rounded-xl bg-gold-metallic text-nova-deep font-bold text-sm tracking-wide shadow-glow-gold hover:brightness-110 active:scale-95 transition-all cursor-pointer"
+        >
+          Continue <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </button>
+
+        <button
+          id="btn-submit"
+          type="button"
+          onclick="handleSubmit()"
+          class="hidden inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-gold-metallic text-nova-deep font-black text-sm tracking-wide shadow-glow-gold hover:brightness-110 active:scale-95 transition-all cursor-pointer"
+        >
+          <span id="submit-spinner" class="hidden"><i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i></span>
+          <span id="submit-text">Submit VIP Feedback</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- COMPLETION SCREEN -->
+    <section id="completion-screen" class="hidden bg-nova-cardBg backdrop-blur-xl border border-nova-cardBorder rounded-3xl p-8 sm:p-14 shadow-luxury text-center">
+      <div class="relative inline-flex items-center justify-center mb-8">
+        <div class="w-24 h-24 rounded-3xl bg-gradient-to-tr from-nova-rich via-nova-vibrant to-nova-gold p-1 shadow-glow-gold">
+          <div class="w-full h-full bg-nova-bg rounded-[22px] flex items-center justify-center">
+            <i data-lucide="check-circle-2" class="w-12 h-12 text-nova-gold"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-nova-rich/60 border border-nova-gold/20 text-nova-champagne text-xs font-semibold mb-4">
+        <i data-lucide="crown" class="w-3.5 h-3.5 text-nova-gold"></i> VIP Confirmation Logged
+      </div>
+
+      <h2 class="text-3xl sm:text-4xl font-black text-white mb-3">Thank You!</h2>
+      <p class="text-lg text-nova-champagne font-medium mb-3">Your feedback helps us build a better Winfinity Rewards experience.</p>
+      <p class="text-sm text-purple-200/60 max-w-md mx-auto mb-8">
+        We appreciate you being part of the Winfinity Rewards community. Your responses and verified backup contacts are securely saved.
+      </p>
+
+      <button
+        onclick="resetSurvey()"
+        class="inline-flex items-center gap-2 px-7 py-3 rounded-xl bg-white/5 border border-nova-gold/30 hover:bg-white/10 text-nova-champagne text-sm font-semibold transition-all cursor-pointer"
+      >
+        <i data-lucide="rotate-ccw" class="w-4 h-4"></i> Back to Winfinity Rewards
+      </button>
+    </section>
+  </main>
+
+  <footer class="w-full py-6 text-center text-xs text-purple-300/40 border-t border-white/5">
+    &copy; Winfinity Rewards Entertainment LLC. All rights reserved.
+  </footer>
+
+  <!-- SCRIPT LOGIC -->
+  <script>
+    // ========================================================
+    // PASTE YOUR DEPLOYED GOOGLE APPS SCRIPT WEB APP URL HERE:
+    // ========================================================
+    const GOOGLE_SHEETS_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbykSqBAO9XiZKG5P192IzJAWmbP5LCOAOjatLlOYMiZbWiPqr3NUkFC8cSvyCBoRqzO/exec";
+
+    let currentStep = 1;
+    let selectedRating = 5;
+    let mandatoryBackupType = "WhatsApp Number";
+    let preferredNotificationChannel = "WhatsApp";
+
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Single-choice option handlers
+    document.querySelectorAll('.option-card.single').forEach(card => {
+      card.addEventListener('click', function() {
+        const group = this.closest('[data-group]');
+        if (group) {
+          group.querySelectorAll('.option-card.single').forEach(c => {
+            c.classList.remove('selected');
+            c.querySelector('.check-icon').classList.add('hidden');
+            c.querySelector('.check-icon').classList.remove('block');
+          });
+          this.classList.add('selected');
+          this.querySelector('.check-icon').classList.remove('hidden');
+          this.querySelector('.check-icon').classList.add('block');
+
+          if (group.dataset.group === 'notifyBackup') {
+            const container = document.getElementById('notifyChannelContainer');
+            if (this.dataset.val === 'Yes') {
+              container.classList.remove('hidden');
+            } else {
+              container.classList.add('hidden');
+            }
+          }
+        }
+      });
+    });
+
+    function toggleMulti(elem) {
+      elem.classList.toggle('selected');
+      const icon = elem.querySelector('.check-icon');
+      icon.classList.toggle('hidden');
+    }
+
+    function setMandatoryType(type, btn) {
+      mandatoryBackupType = type;
+      document.querySelectorAll('#mandatory-type-selector button').forEach(b => {
+        b.className = "type-btn py-2 px-3 text-xs font-semibold rounded-lg border border-white/10 bg-white/5 text-gray-300";
+      });
+      btn.className = "type-btn py-2 px-3 text-xs font-semibold rounded-lg border border-nova-gold bg-nova-gold text-nova-deep font-bold";
+
+      const input = document.getElementById('mandatoryContactValue');
+      if (type === 'WhatsApp Number') input.placeholder = "e.g. +1 (555) 019-2834";
+      else if (type === 'Phone Number') input.placeholder = "e.g. +1 (555) 345-6789";
+      else input.placeholder = "e.g. @username on Instagram/Snapchat/Telegram";
+    }
+
+    function setRating(val) {
+      selectedRating = val;
+      document.querySelectorAll('#satisfactionRatingGroup .star-btn').forEach(btn => {
+        const lvl = parseInt(btn.dataset.level);
+        btn.classList.toggle('active', lvl <= val);
+      });
+    }
+
+    function setNotificationChannel(channel, btn) {
+      preferredNotificationChannel = channel;
+      document.querySelectorAll('#preferredNotificationChannelGroup button').forEach(b => {
+        b.className = "notif-chan-btn py-2 px-3 text-xs font-medium rounded-lg border border-white/10 bg-white/5 text-gray-300";
+      });
+      btn.className = "notif-chan-btn py-2 px-3 text-xs font-bold rounded-lg border border-nova-gold bg-nova-gold text-nova-deep shadow-glow-gold";
+    }
+
+    function startSurvey() {
+      document.getElementById('hero-section').classList.add('hidden');
+      document.getElementById('survey-card').classList.remove('hidden');
+      updateProgress();
+    }
+
+    function updateProgress() {
+      document.getElementById('current-step-text').innerText = currentStep;
+      const pct = Math.round((currentStep / 6) * 100);
+      document.getElementById('percentage-text').innerText = `${pct}% Completed`;
+      document.getElementById('progress-fill').style.width = `${pct}%`;
+
+      document.querySelectorAll('.survey-step').forEach((el, index) => {
+        el.classList.toggle('hidden', index + 1 !== currentStep);
+      });
+
+      const btnBack = document.getElementById('btn-back');
+      const btnNext = document.getElementById('btn-next');
+      const btnSubmit = document.getElementById('btn-submit');
+
+      btnBack.classList.toggle('invisible', currentStep === 1);
+      btnNext.classList.toggle('hidden', currentStep === 6);
+      btnSubmit.classList.toggle('hidden', currentStep !== 6);
+
+      document.getElementById('validation-error').classList.add('hidden');
+      lucide.createIcons();
+    }
+
+    function validateCurrentStep() {
+      const showError = (msg) => {
+        const err = document.getElementById('validation-error');
+        document.getElementById('error-message').innerText = msg;
+        err.classList.remove('hidden');
+        window.scrollTo({ top: 120, behavior: 'smooth' });
+        return false;
+      };
+
+      if (currentStep === 1) {
+        const name = document.getElementById('playerName').value.trim();
+        if (!name) return showError("Player Full Name is required to proceed.");
+        const dur = document.querySelector('[data-group="duration"] .selected');
+        const freq = document.querySelector('[data-group="frequency"] .selected');
+        if (!dur || !freq) return showError("Please answer how long and how often you play.");
+      }
+
+      if (currentStep === 2) {
+        const chan = document.querySelector('[data-group="backupChannel"] .selected');
+        const play = document.querySelector('[data-group="playPlatform"] .selected');
+        if (!chan || !play) return showError("Please select both your preferred backup channel and play platform.");
+      }
+
+      if (currentStep === 3) {
+        const mandatoryVal = document.getElementById('mandatoryContactValue').value.trim();
+        if (!mandatoryVal) return showError("Priority Backup Contact is mandatory.");
+
+        const wa = document.getElementById('contact_whatsapp').value.trim();
+        const tg = document.getElementById('contact_telegram').value.trim();
+        const ig = document.getElementById('contact_instagram').value.trim();
+        const em = document.getElementById('contact_email').value.trim();
+
+        if (!wa) return showError("WhatsApp Number is required.");
+        if (!tg) return showError("Telegram Username is required (enter 'none' if unavailable).");
+        if (!ig) return showError("Instagram Handle is required (enter 'none' if unavailable).");
+        if (!em || !em.includes('@')) return showError("A valid Email Address is required.");
+      }
+
+      if (currentStep === 4) {
+        const games = document.querySelectorAll('#gamesGroup .selected');
+        if (games.length === 0) return showError("Please select at least one type of game you enjoy.");
+      }
+
+      if (currentStep === 5) {
+        if (!selectedRating) return showError("Please select your satisfaction rating.");
+      }
+
+      return true;
+    }
+
+    function nextStep() {
+      if (!validateCurrentStep()) return;
+      if (currentStep < 6) {
+        currentStep++;
+        updateProgress();
+        window.scrollTo({ top: 120, behavior: 'smooth' });
+      }
+    }
+
+    function prevStep() {
+      if (currentStep > 1) {
+        currentStep--;
+        updateProgress();
+      }
+    }
+
+    async function handleSubmit() {
+      if (!validateCurrentStep()) return;
+
+      const submitBtn = document.getElementById('btn-submit');
+      const spinner = document.getElementById('submit-spinner');
+      const submitText = document.getElementById('submit-text');
+
+      submitBtn.disabled = true;
+      spinner.classList.remove('hidden');
+      submitText.innerText = "Transmitting...";
+
+      // Full Survey Data Structure
+      const payload = {
+        playerName: document.getElementById('playerName').value.trim(),
+        playerExperience: {
+          duration: document.querySelector('[data-group="duration"] .selected')?.dataset.val || "",
+          frequency: document.querySelector('[data-group="frequency"] .selected')?.dataset.val || ""
+        },
+        communicationPreferences: {
+          backupChannel: document.querySelector('[data-group="backupChannel"] .selected')?.dataset.val || "",
+          playPlatform: document.querySelector('[data-group="playPlatform"] .selected')?.dataset.val || ""
+        },
+        contactInformation: {
+          mandatoryBackupType: mandatoryBackupType,
+          mandatoryBackupValue: document.getElementById('mandatoryContactValue').value.trim(),
+          whatsapp: document.getElementById('contact_whatsapp').value.trim(),
+          telegram: document.getElementById('contact_telegram').value.trim(),
+          instagram: document.getElementById('contact_instagram').value.trim(),
+          email: document.getElementById('contact_email').value.trim()
+        },
+        gamingPreferences: {
+          gameTypes: Array.from(document.querySelectorAll('#gamesGroup .selected')).map(e => e.dataset.val),
+          suggestedGames: document.getElementById('suggestedGames').value.trim()
+        },
+        featureSuggestions: {
+          desiredFeatures: Array.from(document.querySelectorAll('#featuresGroup .selected')).map(e => e.dataset.val),
+          satisfaction: selectedRating,
+          oneImprovement: document.getElementById('oneImprovement').value.trim()
+        },
+        feedback: {
+          generalFeedback: document.getElementById('generalFeedback').value.trim(),
+          notifyOnBackupLaunch: document.querySelector('[data-group="notifyBackup"] .selected')?.dataset.val === "Yes",
+          preferredNotificationChannel: preferredNotificationChannel
+        }
+      };
+
+      try {
+        if (!GOOGLE_SHEETS_WEBHOOK_URL.includes("YOUR_SCRIPT_ID_HERE")) {
+          await fetch(GOOGLE_SHEETS_WEBHOOK_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+            body: JSON.stringify(payload)
+          });
+        } else {
+          console.warn("Script URL placeholder detected. Logging output to console:");
+          console.log(payload);
+          await new Promise(r => setTimeout(r, 1200));
+        }
+
+        document.getElementById('survey-card').classList.add('hidden');
+        document.getElementById('completion-screen').classList.remove('hidden');
+        window.scrollTo({ top: 80, behavior: 'smooth' });
+      } catch (err) {
+        console.error(err);
+        const errBanner = document.getElementById('validation-error');
+        document.getElementById('error-message').innerText = "Submission failed. Please verify your connection and try again.";
+        errBanner.classList.remove('hidden');
+      } finally {
+        submitBtn.disabled = false;
+        spinner.classList.add('hidden');
+        submitText.innerText = "Submit VIP Feedback";
+      }
+    }
+
+    function resetSurvey() {
+      location.reload();
+    }
+  </script>
+</body>
+</html>
